@@ -16,15 +16,25 @@ header {
     grid-area: logo;
     align-self: center;
     justify-self: center;
-    display: flex;
-    align-items: center; }
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    padding: 0 27px 0 0;
+    grid-template: 'img txt'; }
+    header .logo .img {
+      grid-area: img; }
+    header .logo .txt {
+      grid-area: txt; }
     header .logo span {
       font-size: 42px;
       font-weight: 700; }
     header .logo img {
-      width: 50px;
-      transform: rotate(-44deg) translate(-6px, 2px); }
+      width: 68px;
+      margin: 12px 0 0px 0px;
+      transform: rotate(-82deg) translate(2px, 13px); }
     header .logo h1 {
-      font-size: 16px; }
+      font-size: 16px;
+      font-weight: 100;
+      transform: translateY(-10px); }
 
 /*# sourceMappingURL=style.css.map */
