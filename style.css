@@ -37,4 +37,29 @@ header {
       font-weight: 100;
       transform: translateY(-10px); }
 
+.welcome {
+  padding: 0 30px 0 30px; }
+  .welcome h1 {
+    text-align: center;
+    margin: 0 0 30px 0; }
+  .welcome nav {
+    text-align: center;
+    margin: 0 0 30px 0; }
+    .welcome nav .contact {
+      outline: none;
+      background: #fff;
+      border: 2px solid #000;
+      padding: 10px 25px;
+      text-transform: uppercase; }
+      .welcome nav .contact:hover {
+        cursor: pointer;
+        background: #000;
+        color: #fff; }
+
+.companies {
+  padding: 0 30px 0 30px;
+  margin: 70px 0 0 0; }
+  .companies h1 {
+    font-size: 18px; }
+
 /*# sourceMappingURL=style.css.map */
