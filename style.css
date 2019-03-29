@@ -7,7 +7,11 @@ body {
   box-sizing: border-box; }
 
 header {
-  height: 200px;
+  height: 260px;
+  background-image: url("img/adorable-animal-animal-photography-1629781.jpg");
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: 140%;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
