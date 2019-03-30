@@ -1,7 +1,7 @@
 $sec-padding : 0 30px 0 30px;
 $sec-top-margin: 100px 0 0 0;
-$sec-h1: 20px;
-$sec-h1-margin: 0 0 20px 0;
+$sec-h1-size: 20px;
+$sec-h1-size-margin: 0 0 20px 0;
 $sec-p-margin: 0 0 20px 0;
 
 
@@ -157,20 +157,34 @@ header {
     padding: $sec-padding;
     margin: $sec-top-margin;
     h1 {
-        font-size: $sec-h1;
-        margin: $sec-h1-margin;
+        font-size: $sec-h1-size;
+        margin: $sec-h1-size-margin;
         text-align: center;
     }
     p {
         margin: 0 0 50px 0;
     }
     ul.tips-ul {
-        padding: 0 0 0 30px;
-        margin: 0 0 50px 0;
-
         list-style-type: none;
+        width: 100%;
         li {
-            margin: 0 0 5px 0;
+            text-align: center;
+            padding: 10px;
+            &:first-of-type {
+                background: #d8d6d6;
+            }
+            &:last-of-type {
+                background: #d8d6d6;
+            }
         }
+    }
+}
+
+.companies {
+    padding: $sec-padding;
+    margin: 100px 0 0 0;
+    h1 {
+        font-size: $sec-h1-size;
+        margin: $sec-h1-size-margin;
     }
 }
