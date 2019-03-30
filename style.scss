@@ -1,6 +1,10 @@
-$section-padding : 0 30px 0 30px;
-$section-top-margin: 100px 0 0 0;
-$sections-h1: 18px;
+$sec-padding : 0 30px 0 30px;
+$sec-top-margin: 100px 0 0 0;
+$sec-h1: 20px;
+$sec-h1-margin: 0 0 20px 0;
+$sec-p-margin: 0 0 20px 0;
+
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -126,8 +130,8 @@ header {
 }
 
 .welcome {
-    padding: $section-padding;
-    margin: $section-top-margin;
+    padding: $sec-padding;
+    margin: $sec-top-margin;
     h1 {
         text-align: center;
         margin: 0 0 30px 0;
@@ -149,10 +153,24 @@ header {
         }
     }
 }
-.companies {
-    padding: $section-padding;
-    margin: $section-top-margin;
+.tips {
+    padding: $sec-padding;
+    margin: $sec-top-margin;
     h1 {
-        font-size: $sections-h1;
+        font-size: $sec-h1;
+        margin: $sec-h1-margin;
+        text-align: center;
+    }
+    p {
+        margin: 0 0 50px 0;
+    }
+    ul.tips-ul {
+        padding: 0 0 0 30px;
+        margin: 0 0 50px 0;
+
+        list-style-type: none;
+        li {
+            margin: 0 0 5px 0;
+        }
     }
 }
