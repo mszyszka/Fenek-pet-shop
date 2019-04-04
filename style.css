@@ -46,8 +46,7 @@ header {
 
 .main-nav {
   position: fixed;
-  top: 0;
-  width: 100%; }
+  top: 0; }
   .main-nav .hamburger {
     padding: 30px;
     width: 85px; }
@@ -119,8 +118,7 @@ header {
   .tips p {
     margin: 0 0 50px 0; }
   .tips ul.tips-ul {
-    list-style-type: none;
-    width: 100%; }
+    list-style-type: none; }
     .tips ul.tips-ul li {
       text-align: center;
       padding: 10px; }

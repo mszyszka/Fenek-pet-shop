@@ -67,7 +67,6 @@ header {
 .main-nav {
     position: fixed;
     top: 0;
-    width: 100%;
     .hamburger {
         padding: 30px;
         width: 85px;
@@ -166,7 +165,7 @@ header {
     }
     ul.tips-ul {
         list-style-type: none;
-        width: 100%;
+        // width: 100%;
         li {
             text-align: center;
             padding: 10px;
@@ -187,4 +186,5 @@ header {
         font-size: $sec-h1-size;
         margin: $sec-h1-size-margin;
     }
+
 }
