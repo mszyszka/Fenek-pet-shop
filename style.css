@@ -8,7 +8,7 @@ body {
 
 header {
   height: 260px;
-  background-image: url("img/adorable-animal-animal-photography-1629781.jpg");
+  background-image: url("img/pictures/adorable-animal-animal-photography-1629781.jpg");
   background-position: 0% 50%;
   background-repeat: no-repeat;
   background-size: 140%;
@@ -46,7 +46,8 @@ header {
 
 .main-nav {
   position: fixed;
-  top: 0; }
+  top: 0;
+  width: 100vw; }
   .main-nav .hamburger {
     padding: 30px;
     width: 85px; }
@@ -76,6 +77,7 @@ header {
     text-align: center;
     list-style-type: none;
     display: none;
+    transition: all ease-in-out 200ms;
     -webkit-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.75); }
@@ -98,13 +100,13 @@ header {
   .welcome nav {
     text-align: center;
     margin: 0 0 30px 0; }
-    .welcome nav .contact {
+    .welcome nav .contactBtn {
       outline: none;
       background: #fff;
       border: 2px solid #000;
       padding: 10px 25px;
       text-transform: uppercase; }
-      .welcome nav .contact:hover {
+      .welcome nav .contactBtn:hover {
         cursor: pointer;
         background: #000;
         color: #fff; }
@@ -130,7 +132,7 @@ header {
 
 .companies {
   padding: 0 30px 0 30px;
-  margin: 100px 0 200px 0; }
+  margin: 100px 0 0 0; }
   .companies h1 {
     font-size: 20px;
     text-align: center;
@@ -143,5 +145,35 @@ header {
     .companies .carousel div.carousel-item img {
       width: 200px;
       margin: auto; }
+
+.contact {
+  padding: 0 30px 0 30px;
+  margin: 100px 0 0 0; }
+  .contact h1 {
+    font-size: 20px;
+    margin: 0 0 50px 0;
+    text-align: center; }
+  .contact .contact-social-media {
+    text-align: center; }
+    .contact .contact-social-media img {
+      width: 100px; }
+  .contact .contact-info {
+    margin: 30px 0 0 0; }
+    .contact .contact-info div.phone {
+      display: flex;
+      align-items: center; }
+      .contact .contact-info div.phone i.fa-phone {
+        font-size: 34px; }
+      .contact .contact-info div.phone span.phone-number {
+        font-weight: 500;
+        font-size: 20px;
+        margin: 0 0 0 20px; }
+    .contact .contact-info address {
+      margin: 30px 0 0 0; }
+      .contact .contact-info address span {
+        font-size: 18px;
+        font-weight: 500; }
+      .contact .contact-info address p {
+        font-size: 12px; }
 
 /*# sourceMappingURL=style.css.map */
