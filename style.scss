@@ -14,6 +14,39 @@ body {
     box-sizing: border-box;
 }
 
+.logo {
+    //Maby it will be better to make .logo flex than grid
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    padding: 0 27px 0 0;
+    grid-template:
+    'img txt';
+    .img {
+        grid-area: img;
+    }
+    .txt {
+        grid-area: txt;
+    }
+    span {
+        font-size: 42px;
+        font-weight: 700;
+    }
+    img {
+        width: 68px;
+        margin: 12px 0 0px 0px;
+        transform: rotate(-82deg) translate(2px, 13px);
+    }
+    h1 {
+        font-size: 16px;
+        font-weight: 100;
+        transform: translateY(-10px);
+    }
+}
+
 header {
     height: 260px;
     background-image: url("img/pictures/adorable-animal-animal-photography-1629781.jpg");
@@ -26,38 +59,6 @@ header {
     grid-template-areas: 
     'logo';
 
-    .logo {
-        //Maby it will be better to make .logo flex than grid
-        grid-area: logo;
-        align-self: center;
-        justify-self: center;
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        padding: 0 27px 0 0;
-        grid-template:
-        'img txt';
-        .img {
-            grid-area: img;
-        }
-        .txt {
-            grid-area: txt;
-        }
-        span {
-            font-size: 42px;
-            font-weight: 700;
-        }
-        img {
-            width: 68px;
-            margin: 12px 0 0px 0px;
-            transform: rotate(-82deg) translate(2px, 13px);
-        }
-        h1 {
-            font-size: 16px;
-            font-weight: 100;
-            transform: translateY(-10px);
-        }
-    }
 }
 
 .white-background {
@@ -66,6 +67,7 @@ header {
 
 .main-nav {
     position: fixed;
+    z-index: 100;
     top: 0;
     width: 100vw;
     .hamburger {
@@ -170,7 +172,6 @@ header {
         list-style-type: none;
         // width: 100%;
         li {
-            text-align: center;
             padding: 10px;
             &:first-of-type {
                 background: #d8d6d6;
@@ -217,15 +218,25 @@ header {
         text-align: center;
         img {
             width: 100px;
+            transition: all ease-in-out 200ms;
+            &:hover {
+                width: 95px;
+                cursor: pointer;
+                .contact-social-media {
+                    height: calc(100% + 5px);
+                }
+
+            }
         }
     }
     .contact-info {
-        margin: 30px 0 0 0;
+        margin: 50px 0 0 0;
         div.phone {
             display: flex;
             align-items: center;
             i.fa-phone {
                 font-size: 34px;
+                transform: rotate(-15deg);
             }
             span.phone-number {
                 font-weight: 500;
@@ -233,16 +244,31 @@ header {
                 margin: 0 0 0 20px;
             }
         }
-        address {
+        .address {
             margin: 30px 0 0 0;
-            span {
-                font-size: 18px;
-                font-weight: 500;
+            display: flex;
+            align-items: center;
+            .address-pin-icon {
+                i.fa-map-marker-alt {
+                    font-size: 34px;
+                }
             }
-            p {
-                font-size: 12px;
+            .address-txt {
+                margin: 0 0 0 30px;
+                span {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                p {
+                    font-size: 12px;
+                }
             }
+
         }
+
+    }
+    section.contact-map {
+        margin: 50px 0 0 0;
     }
 
 }
