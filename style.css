@@ -6,6 +6,10 @@ body {
   margin: 0;
   box-sizing: border-box; }
 
+a:link, a:visited, a:hover, a:active {
+  color: #000;
+  text-decoration: none; }
+
 .logo {
   grid-area: logo;
   align-self: center;
@@ -85,6 +89,8 @@ header {
     box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.75); }
     .main-nav .menu li.menu-li {
       padding: 10px; }
+      .main-nav .menu li.menu-li a {
+        padding: 10px; }
       .main-nav .menu li.menu-li:first-child {
         padding-top: 20px; }
       .main-nav .menu li.menu-li:last-child {
@@ -156,13 +162,13 @@ header {
     text-align: center; }
   .contact .contact-social-media {
     text-align: center; }
-    .contact .contact-social-media img {
+    .contact .contact-social-media a img {
       width: 100px;
       transition: all ease-in-out 200ms; }
-      .contact .contact-social-media img:hover {
+      .contact .contact-social-media a img:hover {
         width: 95px;
         cursor: pointer; }
-        .contact .contact-social-media img:hover .contact-social-media {
+        .contact .contact-social-media a img:hover .contact-social-media {
           height: calc(100% + 5px); }
   .contact .contact-info {
     margin: 50px 0 0 0; }
@@ -191,5 +197,14 @@ header {
           font-size: 12px; }
   .contact section.contact-map {
     margin: 50px 0 0 0; }
+
+.site-footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 'footer-logo';
+  padding: 100px 0 100px 0; }
+  .site-footer .logo {
+    grid-area: footer-logo; }
 
 /*# sourceMappingURL=style.css.map */
