@@ -441,6 +441,30 @@ header {
     header {
         height: 500px;
     }
+    section.welcome {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'h1 p'
+        'h1 contactBtn';
+        h1 {
+            grid-area: h1;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 40px;
+        }
+        nav {
+            grid-area: contactBtn; 
+            text-align: left;
+        }
+        p {
+            grid-area: p;
+            margin: 0 0 50px 0;
+        }
+
+    }
 }
 @media(min-width: 1800px) {
     header {
