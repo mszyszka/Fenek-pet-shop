@@ -5,11 +5,10 @@
 $('.hamburger').on('click', ()=> {
 
     const menu = $('.menu');
-    const mainNav = $('.main-nav');
+    const hamburger = $('.hamburger');
 
-    $('.hamburger').toggleClass('change')
-    menu.toggleClass('open');
-    mainNav.toggleClass('white-background');
+    hamburger.toggleClass('change white-background')
+    menu.toggleClass('open white-background');
 
     }
 );

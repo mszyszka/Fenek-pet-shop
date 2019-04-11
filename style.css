@@ -71,6 +71,9 @@ header {
       margin-bottom: 0; }
     .main-nav .hamburger:hover {
       cursor: pointer; }
+  .main-nav .hamburger.change {
+    width: 70%;
+    border-right: 1px solid black; }
   .main-nav .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-7px, 6px);
     transform: rotate(-45deg) translate(-7px, 6px); }
@@ -82,6 +85,9 @@ header {
   .main-nav .menu {
     text-align: center;
     list-style-type: none;
+    width: 70%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
     display: none;
     transition: all ease-in-out 200ms;
     -webkit-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.75);
@@ -132,9 +138,7 @@ header {
     list-style-type: none; }
     .tips ul.tips-ul li {
       padding: 10px; }
-      .tips ul.tips-ul li:first-of-type {
-        background: #d8d6d6; }
-      .tips ul.tips-ul li:last-of-type {
+      .tips ul.tips-ul li:nth-of-type(2n-1) {
         background: #d8d6d6; }
 
 .companies {
@@ -206,5 +210,26 @@ header {
   padding: 100px 0 100px 0; }
   .site-footer .logo {
     grid-area: footer-logo; }
+    .site-footer .logo .img img {
+      width: 54px; }
+    .site-footer .logo .txt span {
+      font-size: 28px; }
+    .site-footer .logo .txt h1 {
+      font-size: 12px; }
+
+@media (min-width: 600px) {
+  .main-nav .hamburger {
+    display: none; }
+  .main-nav .menu {
+    display: flex;
+    border: none;
+    box-shadow: none;
+    padding: 15px 20px; }
+    .main-nav .menu li.menu-li {
+      padding: 0; }
+      .main-nav .menu li.menu-li:first-of-type {
+        padding: 0; }
+      .main-nav .menu li.menu-li:last-of-type {
+        padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */
