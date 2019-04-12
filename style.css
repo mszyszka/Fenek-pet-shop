@@ -364,7 +364,31 @@ header {
     section.tips ul.tips-ul {
       width: 100%;
       max-width: 1200px;
-      justify-self: center; } }
+      justify-self: center; }
+
+  section.companies {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'h1 carousel'; }
+    section.companies h1 {
+      grid-area: h1;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: right;
+      width: 100%;
+      max-width: 585px;
+      justify-self: end;
+      margin: 0; }
+      section.companies h1 b {
+        display: block;
+        font-size: 80px; }
+    section.companies .carousel {
+      grid-area: carousel;
+      width: 100%;
+      max-width: 585px;
+      justify-self: start; } }
 @media (min-width: 1800px) {
   header {
     height: 500px; } }
