@@ -1,6 +1,7 @@
 $sec-padding : 0 30px 0 30px;
 $sec-padding-600px : 0 60px 0 60px;
 $sec-padding-900px : 0 90px 0 90px;
+$sec-padding-1200px : 0 120px 0 120px;
 $sec-top-margin: 100px 0 0 0;
 $sec-h1-size: 20px;
 $sec-h1-size-margin: 0 0 20px 0;
@@ -202,7 +203,14 @@ header {
         li {
             padding: 10px;
             &:nth-of-type(2n-1) {
-                background: #d8d6d6;
+                background: rgba(246,246,246,1);
+                background: -moz-linear-gradient(left, rgba(246,246,246,1) 0%, rgba(216,214,214,1) 53%, rgba(216,214,214,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(246,246,246,1)), color-stop(53%, rgba(216,214,214,1)), color-stop(100%, rgba(216,214,214,1)));
+                background: -webkit-linear-gradient(left, rgba(246,246,246,1) 0%, rgba(216,214,214,1) 53%, rgba(216,214,214,1) 100%);
+                background: -o-linear-gradient(left, rgba(246,246,246,1) 0%, rgba(216,214,214,1) 53%, rgba(216,214,214,1) 100%);
+                background: -ms-linear-gradient(left, rgba(246,246,246,1) 0%, rgba(216,214,214,1) 53%, rgba(216,214,214,1) 100%);
+                background: linear-gradient(to right, rgba(246,246,246,1) 0%, rgba(216,214,214,1) 53%, rgba(216,214,214,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#d8d6d6', GradientType=1 );
             }
         }
     }
@@ -365,7 +373,7 @@ header {
 
 }
 
-@media(min-width: 900px) {
+@media(min-width: 900px) { 
     header {
         height: 420px;
         .logo {
@@ -403,6 +411,9 @@ header {
         margin: 200px 0 0 0;
         h1 {
             margin:  0 0  60px 0;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 30px;
         }
         p {
             margin: 0 0 60px 0;
@@ -443,7 +454,7 @@ header {
     }
     section.welcome {
         display: grid;
-        column-gap: 10px;
+        column-gap: 30px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
         grid-template-areas: 
@@ -452,8 +463,16 @@ header {
         h1 {
             grid-area: h1;
             text-transform: uppercase;
-            text-align: left;
+            text-align: right;
+            justify-self: right;
             font-size: 40px;
+            max-width: 585px;
+
+            span {
+                display: block;
+                font-size: 80px;
+                margin-top: 10px;
+            }
         }
         nav {
             grid-area: contactBtn; 
@@ -462,6 +481,26 @@ header {
         p {
             grid-area: p;
             margin: 0 0 50px 0;
+            max-width: 585px;
+        }
+
+    }
+    section.tips {
+        display: grid;
+        h1 {
+            width: 100%;
+            max-width: 1200px;
+            justify-self: center;
+        }
+        p {
+            width: 100%;
+            max-width: 1200px;
+            justify-self: center;
+        }
+        ul.tips-ul {
+            width: 100%;
+            max-width: 1200px;
+            justify-self: center;
         }
 
     }
@@ -470,5 +509,14 @@ header {
     header {
         height: 500px;
     }
+    // section.welcome {
+    //     h1 {
+    //         max-width: 685px;
+    //     }
+    //     p {
+    //         max-width: 685px;
+    //     }
+
+    // }
 }
 

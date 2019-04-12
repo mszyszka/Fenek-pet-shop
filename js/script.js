@@ -30,3 +30,4 @@ function removeNavStyleOver600px(x) {
   var x = window.matchMedia("(max-width: 600px)")
   removeNavStyleOver600px(x) // Call listener function at run time
   x.addListener(removeNavStyleOver600px) // Attach listener function on state changes
+
