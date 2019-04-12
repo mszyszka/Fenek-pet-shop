@@ -327,6 +327,7 @@ header {
     height: 500px; }
 
   section.welcome {
+    margin: 300px 0 0 0;
     display: grid;
     column-gap: 30px;
     grid-template-columns: 1fr 1fr;
@@ -341,8 +342,7 @@ header {
       max-width: 585px; }
       section.welcome h1 span {
         display: block;
-        font-size: 80px;
-        margin-top: 10px; }
+        font-size: 80px; }
     section.welcome nav {
       grid-area: contactBtn;
       text-align: left; }
@@ -352,11 +352,15 @@ header {
       max-width: 585px; }
 
   section.tips {
+    margin: 300px 0 0 0;
     display: grid; }
     section.tips h1 {
       width: 100%;
       max-width: 1200px;
       justify-self: center; }
+      section.tips h1 b {
+        display: block;
+        font-size: 80px; }
     section.tips p {
       width: 100%;
       max-width: 1200px;
@@ -367,6 +371,7 @@ header {
       justify-self: center; }
 
   section.companies {
+    margin: 300px 0 0 0;
     display: grid;
     column-gap: 30px;
     grid-template-columns: 1fr 1fr;
@@ -388,7 +393,47 @@ header {
       grid-area: carousel;
       width: 100%;
       max-width: 585px;
-      justify-self: start; } }
+      justify-self: start; }
+
+  section.contact {
+    margin: 300px 0 0 0;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'h1 facebook' 'h1 contact' 'map map'; }
+    section.contact h1 {
+      grid-area: h1;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: right;
+      width: 100%;
+      max-width: 585px;
+      justify-self: end;
+      align-self: center;
+      margin: 0; }
+      section.contact h1 b {
+        display: block;
+        font-size: 80px; }
+    section.contact section.contact-social-media {
+      grid-area: facebook;
+      width: 100%;
+      max-width: 585px; }
+    section.contact section.contact-info {
+      grid-area: contact;
+      width: 100%;
+      max-width: 585px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 'phone address'; }
+      section.contact section.contact-info .phone {
+        grid-area: phone; }
+      section.contact section.contact-info .address {
+        grid-area: address;
+        margin: 0; }
+    section.contact section.contact-map {
+      grid-area: map; } }
 @media (min-width: 1800px) {
   header {
     height: 500px; } }

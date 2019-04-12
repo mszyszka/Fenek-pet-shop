@@ -2,7 +2,8 @@ $sec-padding : 0 30px 0 30px;
 $sec-padding-600px : 0 60px 0 60px;
 $sec-padding-900px : 0 90px 0 90px;
 $sec-padding-1200px : 0 120px 0 120px;
-$sec-top-margin: 100px 0 0 0;
+$sec-margin-1200px : 300px 0 0 0;
+$sec-margin: 100px 0 0 0;
 $sec-h1-size: 20px;
 $sec-h1-size-margin: 0 0 20px 0;
 $sec-p-margin: 0 0 20px 0;
@@ -162,7 +163,7 @@ header {
 
 .welcome {
     padding: $sec-padding;
-    margin: $sec-top-margin;
+    margin: $sec-margin;
     h1 {
         text-align: center;
         font-size: 24px;
@@ -188,7 +189,7 @@ header {
 }
 .tips {
     padding: $sec-padding;
-    margin: $sec-top-margin;
+    margin: $sec-margin;
     h1 {
         font-size: $sec-h1-size;
         margin: $sec-h1-size-margin;
@@ -241,7 +242,7 @@ header {
 
 .contact {
     padding: $sec-padding;
-    margin: $sec-top-margin;
+    margin: $sec-margin;
     h1 {
         font-size: $sec-h1-size;
         margin: 0 0 50px 0;
@@ -453,6 +454,7 @@ header {
         height: 500px;
     }
     section.welcome {
+        margin: $sec-margin-1200px;
         display: grid;
         column-gap: 30px;
         grid-template-columns: 1fr 1fr;
@@ -471,7 +473,6 @@ header {
             span {
                 display: block;
                 font-size: 80px;
-                margin-top: 10px;
             }
         }
         nav {
@@ -486,11 +487,16 @@ header {
 
     }
     section.tips {
+        margin: $sec-margin-1200px;
         display: grid;
         h1 {
             width: 100%;
             max-width: 1200px;
             justify-self: center;
+            b {
+                display: block;
+                font-size: 80px;
+            }
         }
         p {
             width: 100%;
@@ -504,6 +510,7 @@ header {
         }
     }
     section.companies {
+        margin: $sec-margin-1200px;
         display: grid;
         column-gap: 30px;
         grid-template-columns: 1fr 1fr;
@@ -529,6 +536,58 @@ header {
             width: 100%;
             max-width: 585px;
             justify-self: start;
+        }
+    }
+    section.contact {
+        margin: $sec-margin-1200px;
+        display: grid;
+        column-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        'h1 facebook'
+        'h1 contact'
+        'map map';
+        h1 {
+            grid-area: h1;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: right;
+            width: 100%;
+            max-width: 585px;
+            justify-self: end;
+            align-self: center;
+            margin: 0;
+            b {
+                display: block;
+                font-size: 80px;
+            }
+        }
+        section.contact-social-media {
+            grid-area: facebook;
+            width: 100%;
+            max-width: 585px;
+
+        }
+        section.contact-info {
+            grid-area: contact;
+            width: 100%;
+            max-width: 585px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+            'phone address';
+            .phone {
+                grid-area: phone;
+            }
+            .address {
+                grid-area: address;
+                margin: 0;
+            }
+        }
+        section.contact-map {
+            grid-area: map;
         }
     }
 }
