@@ -541,18 +541,19 @@ header {
     section.contact {
         margin: $sec-margin-1200px;
         display: grid;
+        justify-items: center;
         column-gap: 30px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
-        'h1 facebook'
-        'h1 contact'
-        'map map';
+        'h1 h1 facebook facebook '
+        'contact contact . .'
+        'map map map map';
         h1 {
             grid-area: h1;
             font-size: 30px;
             text-transform: uppercase;
-            text-align: right;
+            text-align: left;
             width: 100%;
             max-width: 585px;
             justify-self: end;
@@ -565,14 +566,25 @@ header {
         }
         section.contact-social-media {
             grid-area: facebook;
+            align-self: center;
             width: 100%;
             max-width: 585px;
-
+            a > img {
+                width: 150px;
+            }
+        }
+        section.contact-map {
+            grid-area: map;
+            margin: 150px 0 0 0;
+            max-width: 1200px;
+            width: 100%;
         }
         section.contact-info {
             grid-area: contact;
+            justify-self: end;
             width: 100%;
             max-width: 585px;
+            margin: 150px 0 0 0;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
@@ -586,9 +598,7 @@ header {
                 margin: 0;
             }
         }
-        section.contact-map {
-            grid-area: map;
-        }
+
     }
 }
 @media(min-width: 1800px) {
