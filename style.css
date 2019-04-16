@@ -136,24 +136,29 @@ header {
         background: #000;
         color: #fff; }
 
-.services {
+section.services {
   padding: 0 30px 0 30px;
   margin: 100px 0 0 0; }
-  .services h1 {
+  section.services h1 {
     font-size: 20px;
     margin: 0 0 20px 0;
     text-align: center; }
-  .services p {
-    margin: 0 0 50px 0; }
-  .services .images {
-    display: flex;
+  section.services .images {
+    display: grid;
+    grid-column-gap: 30px;
     height: 100px;
-    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: '. img1 img2 .';
     margin: 0 0 20px 0; }
-    .services .images img {
-      width: 60px; }
-      .services .images img:first-of-type {
-        margin: 0 30px 0 0; }
+    section.services .images img {
+      width: 60px;
+      grid-area: img1;
+      justify-self: right; }
+      section.services .images img:last-of-type {
+        grid-area: img2;
+        justify-self: left; }
 
 .tips {
   padding: 0 30px 0 30px;
@@ -286,7 +291,7 @@ header {
         .main-nav .menu li.menu-li:last-of-type {
           border: none; }
 
-  section.welcome, section.tips, section.companies, section.contact {
+  section.welcome, section.tips, section.companies, section.contact, section.services {
     padding: 0 60px 0 60px; } }
 @media (min-width: 900px) {
   header {
@@ -306,41 +311,59 @@ header {
   .main-nav .menu {
     margin: 25px 30px; }
 
-  section.welcome {
-    margin: 200px 0 0 0; }
-    section.welcome h1 {
-      margin: 0 0  60px 0; }
-    section.welcome nav {
-      margin: 0 0 60px 0; }
+  section.welcome h1 {
+    margin: 0 0 60px 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 30px; }
+  section.welcome nav {
+    margin: 0 0 60px 0; }
 
-  section.tips {
-    margin: 200px 0 0 0; }
-    section.tips h1 {
-      margin: 0 0  60px 0;
+  section.services {
+    padding: 0 90px 0 90px; }
+    section.services h1 {
+      margin: 0 0 60px 0;
       text-align: left;
       text-transform: uppercase;
       font-size: 30px; }
-    section.tips p {
-      margin: 0 0 60px 0; }
+    section.services .images {
+      margin: 0 0 60px 0;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 'img1 img2 . .'; }
+      section.services .images img {
+        width: 100px;
+        justify-self: left; }
 
-  section.companies {
-    margin: 200px 0 0 0; }
-    section.companies h1 {
-      margin: 0 0  60px 0; }
+  section.tips h1 {
+    margin: 0 0 60px 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 30px; }
+  section.tips p {
+    margin: 0 0 60px 0; }
 
-  section.contact {
-    margin: 200px 0 0 0; }
-    section.contact h1 {
-      margin: 0 0  60px 0; }
-    section.contact section.contact-info {
-      margin: 100px 0 0 0; }
-    section.contact section.contact-info .address {
-      margin: 60px 0 0 0; }
-    section.contact section.contact-map {
-      margin: 100px 0 0 0; }
+  section.companies h1 {
+    margin: 0 0 60px 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 30px; }
 
-  section.welcome, section.tips, section.companies, section.contact {
-    padding: 0 90px 0 90px; } }
+  section.contact h1 {
+    margin: 0 0 60px 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 30px; }
+  section.contact section.contact-info {
+    margin: 100px 0 0 0; }
+  section.contact section.contact-info .address {
+    margin: 60px 0 0 0; }
+  section.contact section.contact-map {
+    margin: 100px 0 0 0; }
+
+  section.welcome, section.tips, section.companies, section.contact, section.services {
+    padding: 0 90px 0 90px;
+    margin: 200px 0 0 0; } }
 @media (min-width: 1200px) {
   header {
     height: 500px; }
@@ -393,6 +416,34 @@ header {
       max-width: 1200px;
       justify-self: center; }
 
+  section.services {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'h1 images' 'p images'; }
+    section.services h1 {
+      width: 100%;
+      max-width: 600px;
+      justify-self: end;
+      grid-area: h1; }
+      section.services h1 b {
+        display: block;
+        font-size: 80px; }
+    section.services .images {
+      grid-area: images;
+      align-self: center;
+      margin: 0;
+      width: 100%;
+      max-width: 600px;
+      justify-self: start;
+      grid-template-areas: '. img1 img2 .'; }
+    section.services p {
+      grid-area: p;
+      width: 100%;
+      max-width: 600px;
+      justify-self: end; }
+
   section.companies {
     margin: 300px 0 0 0;
     display: grid;
@@ -404,7 +455,6 @@ header {
       grid-area: h1;
       font-size: 30px;
       text-transform: uppercase;
-      text-align: right;
       width: 100%;
       max-width: 585px;
       justify-self: end;
@@ -442,6 +492,7 @@ header {
     section.contact section.contact-social-media {
       grid-area: facebook;
       align-self: center;
+      justify-self: start;
       width: 100%;
       max-width: 585px; }
       section.contact section.contact-social-media a > img {

@@ -8,6 +8,13 @@ $sec-h1-size: 20px;
 $sec-h1-size-margin: 0 0 20px 0;
 $sec-p-margin: 0 0 20px 0;
 
+@mixin h1-900px {
+    margin:  0 0 60px 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -188,7 +195,7 @@ header {
     }
 }
 
-.services {
+section.services {
     padding: $sec-padding;
     margin: $sec-margin;
     h1 {
@@ -196,22 +203,29 @@ header {
         margin: $sec-h1-size-margin;
         text-align: center;
     }
-    p {
-        margin: 0 0 50px 0;
-    }
+
     .images {
-        display: flex;
+        display: grid;
+        grid-column-gap: 30px;
         height: 100px;
-        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        '. img1 img2 .';
+        // height: 100px;
+        // justify-content: center;
         margin: 0 0 20px 0;
         img {
             width: 60px;
-            &:first-of-type{
-                margin: 0 30px 0 0;
+            grid-area: img1;
+            justify-self: right;
+            &:last-of-type {
+                grid-area: img2;
+                justify-self: left;
             }
         }
     }
-    
 }
 .tips {
     padding: $sec-padding;
@@ -394,7 +408,7 @@ header {
             }
         }
     }
-    section.welcome, section.tips, section.companies, section.contact {
+    section.welcome, section.tips, section.companies, section.contact, section.services {
         padding: $sec-padding-600px;
     }
 
@@ -426,37 +440,49 @@ header {
         }
     }
     section.welcome {
-        margin: 200px 0 0 0;
         h1 {
-            margin:  0 0  60px 0;
+            @include h1-900px;
+
         }
         nav {
             margin: 0 0 60px 0;
         }
     }
-    section.tips {
-        margin: 200px 0 0 0;
+    section.services {
+        padding: $sec-padding-900px;
         h1 {
-            margin:  0 0  60px 0;
-            text-align: left;
-            text-transform: uppercase;
-            font-size: 30px;
+            @include h1-900px;
+        }
+        .images {
+            margin: 0 0 60px 0;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            'img1 img2 . .';
+            img {
+                width: 100px;
+                justify-self: left;
+            }
+        }
+    }
+    section.tips {
+        h1 {
+            @include h1-900px;
         }
         p {
             margin: 0 0 60px 0;
         }
     }
     section.companies {
-        margin: 200px 0 0 0;
         h1 {
-            margin:  0 0  60px 0;
+            @include h1-900px;
+
         }
 
     }
     section.contact {
-        margin: 200px 0 0 0;
         h1 {
-            margin:  0 0  60px 0;
+            @include h1-900px;
         }
         section.contact-info {
             margin: 100px 0 0 0; 
@@ -471,8 +497,9 @@ header {
         }
     }
 
-    section.welcome, section.tips, section.companies, section.contact {
+    section.welcome, section.tips, section.companies, section.contact, section.services {
         padding: $sec-padding-900px;
+        margin: 200px 0 0 0;
     }
 }
 @media(min-width: 1200px) {
@@ -539,6 +566,41 @@ header {
             justify-self: center;
         }
     }
+    section.services {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'h1 images'
+        'p images';
+        h1 {
+            width: 100%;
+            max-width: 600px;
+            justify-self: end;
+            grid-area: h1;
+            b {
+                display: block;
+                font-size: 80px;
+            }
+        }
+        .images {
+            grid-area: images;
+            align-self: center;
+            margin: 0;
+            width: 100%;
+            max-width: 600px;
+            justify-self: start;
+            grid-template-areas: 
+            '. img1 img2 .';
+        }
+        p {
+            grid-area: p;
+            width: 100%;
+            max-width: 600px;
+            justify-self: end;
+        }
+    }
     section.companies {
         margin: $sec-margin-1200px;
         display: grid;
@@ -551,7 +613,6 @@ header {
             grid-area: h1;
             font-size: 30px;
             text-transform: uppercase;
-            text-align: right;
             width: 100%;
             max-width: 585px;
             justify-self: end;
@@ -597,6 +658,7 @@ header {
         section.contact-social-media {
             grid-area: facebook;
             align-self: center;
+            justify-self: start;
             width: 100%;
             max-width: 585px;
             a > img {
