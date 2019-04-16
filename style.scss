@@ -187,6 +187,32 @@ header {
         }
     }
 }
+
+.services {
+    padding: $sec-padding;
+    margin: $sec-margin;
+    h1 {
+        font-size: $sec-h1-size;
+        margin: $sec-h1-size-margin;
+        text-align: center;
+    }
+    p {
+        margin: 0 0 50px 0;
+    }
+    .images {
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        margin: 0 0 20px 0;
+        img {
+            width: 60px;
+            &:first-of-type{
+                margin: 0 30px 0 0;
+            }
+        }
+    }
+    
+}
 .tips {
     padding: $sec-padding;
     margin: $sec-margin;
@@ -453,6 +479,10 @@ header {
     header {
         height: 500px;
     }
+    .main-nav ul.menu {
+        max-width: 1200px;
+        margin: 25px auto;
+    }
     section.welcome {
         margin: $sec-margin-1200px;
         display: grid;
@@ -599,6 +629,9 @@ header {
             }
         }
 
+    }
+    .site-footer {
+        padding: 150px;
     }
 }
 @media(min-width: 1800px) {

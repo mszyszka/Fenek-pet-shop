@@ -31,3 +31,19 @@ function removeNavStyleOver600px(x) {
   removeNavStyleOver600px(x) // Call listener function at run time
   x.addListener(removeNavStyleOver600px) // Attach listener function on state changes
 
+//////jQuery scrollTo
+$(".a-about").click(function(){
+    $.scrollTo($('.welcome').offset().top-100, 500);
+}); 
+$(".a-tips").click(function(){
+    $.scrollTo($('.tips').offset().top-100, 500);
+});
+$(".a-companies").click(function(){
+    $.scrollTo($('.companies').offset().top-100, 500);
+});
+$(".a-contact").click(function(){
+    $.scrollTo($('.contact').offset().top-100, 500);
+});
+$(".contactBtn").click(function(){
+    $.scrollTo($('.contact').offset().top-100, 500);
+});
