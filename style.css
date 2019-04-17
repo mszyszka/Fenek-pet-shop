@@ -266,12 +266,12 @@ section.services {
     height: 340px; }
 
   .main-nav {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+0,ffffff+0,ffffff+0,ffffff+0,ffffff+60&1+1,1+37,1+37,0+60 */
-    background: -moz-linear-gradient(left, white 0%, white 1%, white 37%, rgba(255, 255, 255, 0) 60%);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+73,0+100 */
+    background: -moz-linear-gradient(left, white 0%, white 73%, rgba(255, 255, 255, 0) 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, white 0%, white 1%, white 37%, rgba(255, 255, 255, 0) 60%);
+    background: -webkit-linear-gradient(left, white 0%, white 73%, rgba(255, 255, 255, 0) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, white 0%, white 1%, white 37%, rgba(255, 255, 255, 0) 60%);
+    background: linear-gradient(to right, white 0%, white 73%, rgba(255, 255, 255, 0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
     /* IE6-9 */ }
@@ -308,8 +308,18 @@ section.services {
       bottom: 18px;
       left: 3px; }
 
-  .main-nav .menu {
-    margin: 25px 30px; }
+  .main-nav {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+0,ffffff+0,ffffff+0,ffffff+0,ffffff+60&1+1,1+37,1+37,0+60 */
+    background: -moz-linear-gradient(left, white 0%, white 1%, white 37%, rgba(255, 255, 255, 0) 60%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, white 0%, white 1%, white 37%, rgba(255, 255, 255, 0) 60%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, white 0%, white 1%, white 37%, rgba(255, 255, 255, 0) 60%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+    /* IE6-9 */ }
+    .main-nav .menu {
+      margin: 25px 30px; }
 
   section.welcome h1 {
     margin: 0 0 60px 0;

@@ -38,6 +38,9 @@ $(".a-about").click(function(){
 $(".a-tips").click(function(){
     $.scrollTo($('.tips').offset().top-100, 500);
 });
+$(".a-services").click(function(){
+    $.scrollTo($('.services').offset().top-100, 500);
+});
 $(".a-companies").click(function(){
     $.scrollTo($('.companies').offset().top-100, 500);
 });
