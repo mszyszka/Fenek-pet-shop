@@ -144,13 +144,8 @@ section.services {
     margin: 0 0 20px 0;
     text-align: center; }
   section.services .images {
-    display: grid;
-    grid-column-gap: 30px;
     height: 100px;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: '. img1 img2 .';
+    text-align: center;
     margin: 0 0 20px 0; }
     section.services .images img {
       width: 60px;
@@ -429,12 +424,12 @@ section.services {
   section.services {
     display: grid;
     grid-column-gap: 30px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: 'h1 images' 'p images'; }
     section.services h1 {
       width: 100%;
-      max-width: 600px;
+      max-width: 585px;
       justify-self: end;
       grid-area: h1; }
       section.services h1 b {
@@ -445,13 +440,12 @@ section.services {
       align-self: center;
       margin: 0;
       width: 100%;
-      max-width: 600px;
-      justify-self: start;
-      grid-template-areas: '. img1 img2 .'; }
+      max-width: 585px;
+      justify-self: start; }
     section.services p {
       grid-area: p;
       width: 100%;
-      max-width: 600px;
+      max-width: 585px;
       justify-self: end; }
 
   section.companies {
